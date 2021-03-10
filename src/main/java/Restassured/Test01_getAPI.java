@@ -8,6 +8,19 @@ import io.restassured.response.Response;
 
 public class Test01_getAPI {
 	
+	
+	@Test
+	public void getAPI2()
+	{		
+		given().
+		//header("Content-Type", "application/json").
+		//param("", "")
+			get("https://reqres.in/api/users?page=2").
+		then().
+			statusCode(200).body("data.id[1]", equalTo(8)).
+			log().
+			all();
+	}
 	@Test
 	public void getAPI()
 	{
@@ -22,16 +35,5 @@ public class Test01_getAPI {
 		System.out.println("Test case passed successfully...");
 	}
 	
-	@Test
-	public void getAPI2()
-	{		
-		given().
-		//header("Content-Type", "application/json").
-		//param("", "")
-			get("https://reqres.in/api/users?page=2").
-		then().
-			statusCode(200).body("data.id[1]", equalTo(8)).
-			log().
-			all();
-	}
+	
 }
