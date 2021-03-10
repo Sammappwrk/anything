@@ -22,7 +22,7 @@ public class Test01_getAPI {
 		System.out.println("Test case passed successfully...");
 	}
 	
-/*	@Test
+	@Test
 	public void getAPI2()
 	{		
 		given().
@@ -33,5 +33,5 @@ public class Test01_getAPI {
 			statusCode(200).body("data.id[1]", equalTo(8)).
 			log().
 			all();
-	}*/
+	}
 }
